@@ -7,6 +7,7 @@ import { Filter } from './Filter/Filter';
 export function App() {
   const [contacts, setcontacts] = useState([]);
   const [filter, setfilter] = useState('');
+  const prevContacts = useRef(contacts);
 
   useEffect(() => {
     const getContacts = JSON.parse(localStorage.getItem('contacts'));
