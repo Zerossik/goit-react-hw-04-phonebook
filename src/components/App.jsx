@@ -20,6 +20,7 @@ export function App() {
   useEffect(() => {
     if (contacts !== prevContacts.current) {
       localStorage.setItem('contacts', JSON.stringify(contacts));
+      prevContacts.current = contacts;
     }
   }, [contacts]);
 
